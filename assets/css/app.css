@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+.brand-logo img {
+  vertical-align: middle;
+}
+.fa.fa-1_5x {
+  font-size: 1.5em;
+}
+.central-face {
+  vertical-align: middle;
+  height: 3em;
+}
+.footer-copyright .central-face {
+  margin-left: 0.5em;
+}
+.page-footer .social-media-links ul li {
+  display: inline;
+}
+.footer-copyright .container {
+  vertical-align: middle;
+}
