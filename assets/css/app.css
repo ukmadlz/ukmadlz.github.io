@@ -10,6 +10,9 @@ main {
 .brand-logo img {
   vertical-align: middle;
 }
+.parallax-container {
+  height: 30em;
+}
 .fa.fa-1_5x {
   font-size: 1.5em;
 }
@@ -17,12 +20,20 @@ main {
   vertical-align: middle;
   height: 3em;
 }
+
 .footer-copyright .central-face {
   margin-left: 0.5em;
 }
 .page-footer .social-media-links ul li {
+  margin-left: 1em;
   display: inline;
 }
 .footer-copyright .container {
   vertical-align: middle;
+}
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+  .page-footer,.page-footer .right-align {
+    text-align: center;
+  }
 }
