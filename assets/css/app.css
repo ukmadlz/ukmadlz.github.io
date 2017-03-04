@@ -9,6 +9,7 @@ main {
 }
 .brand-logo img {
   vertical-align: middle;
+  margin: 0 0.5em;
 }
 .parallax-container {
   height: 30em;
