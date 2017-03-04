@@ -37,3 +37,7 @@ main {
     text-align: center;
   }
 }
+/* Materialize hack */
+#sidenav-overlay {
+  z-index: 1;
+}
