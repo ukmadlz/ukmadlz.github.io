@@ -16,5 +16,6 @@
   }
   blockquote {
     border-left: 0;
+    margin: 0;
   }
 }
