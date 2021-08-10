@@ -36,5 +36,10 @@ export const footer_bottombar_copyright = style({
 export const footer_bottombar_icons = style({
     display: 'inline-block',
     position: 'relative',
-    top: '0.2rem'
+    top: '0.2rem',
+    '@media': {
+        print: {
+            color: vars.color.black,
+        }
+    }
 });
