@@ -7,25 +7,29 @@ import * as styles from './component.css'
 
 const navigationLinks = [
     {
-        label: 'Work',
-        link: '/work'
+        label: 'Resume/CV',
+        link: '/resume'
     },
-    {
-        label: 'Events',
-        link: '/events'
-    },
-    {
-        label: 'Streaming',
-        link: '/streaming'
-    },
-    {
-        label: 'Mentoring',
-        link: '/mentoring'
-    },
-    {
-        label: 'Podcasting',
-        link: '/podcasting'
-    },
+    // {
+    //     label: 'Work',
+    //     link: '/work'
+    // },
+    // {
+    //     label: 'Events',
+    //     link: '/events'
+    // },
+    // {
+    //     label: 'Streaming',
+    //     link: '/streaming'
+    // },
+    // {
+    //     label: 'Mentoring',
+    //     link: '/mentoring'
+    // },
+    // {
+    //     label: 'Podcasting',
+    //     link: '/podcasting'
+    // },
     {
         label: <FontAwesomeIcon icon={faEnvelope} className={styles.navigation_link_text_icon} />,
         link: '/contact'
