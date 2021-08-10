@@ -6,5 +6,13 @@ globalStyle('*', {
 })
 globalStyle('body', {
   "all": "unset",
-  "fontFamily": 'Arial',
+  "fontFamily": "Arial",
+})
+globalStyle('.MuiTypography-body1', {
+  fontSize: "1.5rem",
+  '@media': {
+    print: {
+      fontSize: "1.1rem",
+    }
+  }
 })
