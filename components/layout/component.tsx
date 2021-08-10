@@ -6,7 +6,7 @@ import Footer from '../footer/component'
 import * as styles from './component.css'
 import { raw, vars } from '../../styles/var.css'
 
-export default function LayoutComponent({ children, title, description, color, heroImageName }): JSX.Element {
+export default function LayoutComponent({ children, title, description, color, heroImageName }: any): JSX.Element {
   const colorVar = vars.color[color];
   return (<div>
     <Head title={title} description={description} />

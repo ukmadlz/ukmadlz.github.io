@@ -5,7 +5,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import SocialList from '../socials/component'
 import * as styles from './component.css'
 
-export default function FooterComponent({ color }): JSX.Element {
+export default function FooterComponent({ color }: any): JSX.Element {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_topbar} style={{

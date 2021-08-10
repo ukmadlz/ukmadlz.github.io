@@ -1,11 +1,9 @@
 import { faNodeJs, faPhp, faReact } from '@fortawesome/free-brands-svg-icons'
-import { faMoneyBill } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Fab, Grid, Link, Tooltip, Typography } from '@material-ui/core'
-import { style } from '@vanilla-extract/css'
 import Layout from '../components/layout/component'
 import { socials } from '../components/socials/component'
-import * as styles from './resume.css'
+import * as styles from '../styles/resume.css'
 
 const skills = [{
   name: 'React',
@@ -46,7 +44,7 @@ export default function Resume () {
           Summary
         </Typography>
         <Typography>
-          As with most people in software, I spend most of my life at a keyboard, but I'm lucky that my hobby is my job. I spend my time helping others (and myself) to learn new things and occasionally solve different and difficult problems.
+          {`As with most people in software, I spend most of my life at a keyboard, but I'm lucky that my hobby is my job. I spend my time helping others (and myself) to learn new things and occasionally solve different and difficult problems.`}
         </Typography>
         <Typography variant="h4" component="h2" color="textSecondary">
           Skills

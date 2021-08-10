@@ -1,6 +1,10 @@
 import { createGlobalTheme } from '@vanilla-extract/css';
 
-const color = {
+interface IColors {
+  [key: string]: string;
+} 
+
+const color: IColors = {
   black: '#000',
   white: '#fff',
   'orange-red': '#FC7753',
