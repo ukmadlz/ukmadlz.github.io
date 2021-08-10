@@ -6,13 +6,5 @@ globalStyle('*', {
 })
 globalStyle('body', {
   "all": "unset",
-  "height": "1080px",
-  "width": "1920px",
-  "fontFamily": vars.fontFamily.body,
+  "fontFamily": 'Arial',
 })
-globalStyle('main', {
-  "minHeight": "940px",
-});
-globalStyle('footer', {
-  "minHeight": "140px"
-});

@@ -33,7 +33,8 @@ export default function NavigationComponent(): JSX.Element {
         <AppBar position="static" color="default" elevation={0} className={styles.appbar}>
             <Toolbar className={styles.toolbar}>
                 <Link href='/'
-                        className={styles.logo_link}>
+                    className={styles.logo_link}
+                >
                     <Image
                         src="/images/mike_elsmore_white.svg"
                         width={200}

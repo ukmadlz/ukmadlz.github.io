@@ -4,6 +4,9 @@ const {
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  images: {
+    domains: ['res.cloudinary.com']
+  },
   plugins: [
     new VanillaExtractPlugin(),
     new MiniCssExtractPlugin()
