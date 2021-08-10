@@ -8,13 +8,15 @@ import { raw, vars } from '../../styles/var.css'
 
 export default function LayoutComponent({ children, title, description, color, heroImageName }: any): JSX.Element {
   const colorVar = vars.color[color];
-  return (<div>
-    <Head title={title} description={description} />
-    <Navigation />
+  const heroImage = (heroImageName) ?
     <Hero
       imageName={heroImageName}
       color={color}
-    />
+    /> : "";
+  return (<div>
+    <Head title={title} description={description} />
+    <Navigation />
+    {heroImage}
 
     <Container fixed>
       <main>

@@ -103,25 +103,25 @@ export default function Resume () {
           Contact Details
         </Typography>
         <Grid container spacing={1}>
-        {socials(styles.contactLinkIcon).map((social, index) => {
-          const displayLink = (social.name === "E-mail") ? "mike@elsmore.me" : social.link; 
-          return (
-            <Grid item xs={6} md={12}  key={`social-contact-${index}`}>
-              <Typography>
-                <Link href={social.link} target="_blank" className={styles.contactLinkText} >
-                  {social.logo} {displayLink}
-                </Link> 
-              </Typography>
-            </Grid>
-          )
-        })}
-        <Grid item xs={6} md={12}>
-          <Typography>
-            <Link href="https://elsmore.me" target="_blank" className={styles.contactLinkText} >
-              <FontAwesomeIcon icon={faLink} className={styles.contactLinkIcon} /> {`https://elsmore.me`}
-            </Link> 
-          </Typography>
-        </Grid>
+          {socials(styles.contactLinkIcon).map((social, index) => {
+            const displayLink = (social.name === "E-mail") ? "mike@elsmore.me" : social.link; 
+            return (
+              <Grid item xs={6} md={12}  key={`social-contact-${index}`}>
+                <Typography>
+                  <Link href={social.link} target="_blank" className={styles.contactLinkText} >
+                    {social.logo} {displayLink}
+                  </Link> 
+                </Typography>
+              </Grid>
+            )
+          })}
+          <Grid item xs={6} md={12}>
+            <Typography>
+              <Link href="https://elsmore.me" target="_blank" className={styles.contactLinkText} >
+                <FontAwesomeIcon icon={faLink} className={styles.contactLinkIcon} /> {`https://elsmore.me`}
+              </Link> 
+            </Typography>
+          </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}>
