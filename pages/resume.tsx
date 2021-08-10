@@ -129,7 +129,17 @@ export default function Resume () {
           Summary
         </Typography>
         <Typography paragraph>
-          {`As with most people in software, I spend most of my life at a keyboard, but I'm lucky that my hobby is my job. I spend my time helping others (and myself) to learn new things and occasionally solve different and difficult problems.`}
+          {`I live and breathe technology, not only is it the passion I chose and follow as a career but it's also a heavy part of my past and current hobbies.`}
+        </Typography>
+        <Typography paragraph>
+          {`I consider myself a backend engineer, but I throw my hands at most things, learning DevOps, Developer Tooling, React, and anything else useful in multiple roles. After learning these new skills I happily teach others, either through mentoring, talks, or just helping out where I can.`}
+        </Typography>
+        <Typography paragraph>
+          {`I wasn't kidding when I say my hobbies revolve around code, I can often be found outside of work `}
+          <Link href="https://twitch.tv/ukmadlz" target="_blank">streaming on Twitch</Link>
+          {` building something or other, or even doing maintenance. I've also been running or helping to run developer events for the better part of a decade, and recently taken up `}
+          <Link href="https://anchor.fm/tech-off-topic" target="_blank">tech podcasting</Link>
+          {` to keep myself busy.`}
         </Typography>
       </Grid>
       <Grid item xs={12}>
