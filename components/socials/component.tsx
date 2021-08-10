@@ -1,44 +1,50 @@
 import { Link } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faMedium, faTwitch, faTwitter, faDev } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faMedium, faTwitch, faTwitter, faDev, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import * as styles from './component.css'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+export const socials = [{
+    name: 'Twitter',
+    link: 'https://twitter.com/ukmadlz',
+    logo: <FontAwesomeIcon icon={faTwitter} className={styles.socialLinkIcon}/>,
+  },{
+    name: 'GitHub',
+    link: 'https://github.com/ukmadlz',
+    logo: <FontAwesomeIcon icon={faGithub} className={styles.socialLinkIcon}/>,
+  },{
+    name: 'Twitch',
+    link: 'https://twitch.tv/ukmadlz',
+    logo: <FontAwesomeIcon icon={faTwitch} className={styles.socialLinkIcon}/>,
+  },{
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/mikeelsmore',
+    logo: <FontAwesomeIcon icon={faLinkedin} className={styles.socialLinkIcon}/>,
+  },{
+    name: 'Dev.to',
+    link: 'https://dev.to/ukmadlz',
+    logo: <FontAwesomeIcon icon={faDev} className={styles.socialLinkIcon}/>,
+  },{
+    name: 'Medium',
+    link: 'https://medium.com/@ukmadlz',
+    logo: <FontAwesomeIcon icon={faMedium} className={styles.socialLinkIcon}/>,
+  },{
+    name: 'E-mail',
+    link: 'mailto:mike@elsmore.me?subject=Hi Mike',
+    logo: <FontAwesomeIcon icon={faEnvelope} className={styles.socialLinkIcon}/>,
+  },]
 
 export default function SocialListComponent(): JSX.Element {
     return (<div>
-        <Link
-            href="https://twitter.com/ukmadlz"
+        {socials.map((social, index) => {
+            return (<Link
+            href={social.link}
             target="_blank"
             className={styles.socialLink}
+            key={`social-links-${index}`}
         >
-            <FontAwesomeIcon icon={faTwitter} className={styles.socialLinkIcon}/>
+            {social.logo}
         </Link>
-        <Link
-            href="https://github.com/ukmadlz"
-            target="_blank"
-            className={styles.socialLink}
-        >
-            <FontAwesomeIcon icon={faGithub} className={styles.socialLinkIcon}/>
-        </Link>
-        <Link
-            href="https://twitch.tv/ukmadlz"
-            target="_blank"
-            className={styles.socialLink}
-        >
-            <FontAwesomeIcon icon={faTwitch} className={styles.socialLinkIcon}/>
-        </Link>
-        <Link
-            href="https://medium.com/@ukmadlz"
-            target="_blank"
-            className={styles.socialLink}
-        >
-            <FontAwesomeIcon icon={faMedium} className={styles.socialLinkIcon}/>
-        </Link>
-        <Link
-            href="https://dev.to/ukmadlz"
-            target="_blank"
-            className={styles.socialLink}
-        >
-            <FontAwesomeIcon icon={faDev} className={styles.socialLinkIcon}/>
-        </Link>
+        )})}
     </div>)
 }

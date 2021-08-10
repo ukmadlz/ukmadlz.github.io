@@ -33,10 +33,16 @@ export default function FooterComponent({ color }): JSX.Element {
           <div>
             <Typography>
               {'Built with '}
-              <FontAwesomeIcon icon={faHeart} width="1.45rem" />
+              <FontAwesomeIcon icon={faHeart} width="1.45rem" className={styles.footer_bottombar_icons} />
               {' by '}
-              <Image alt="Built with love by Mike Elsmore" src="/images/mike-elsmore-white.svg" width="25rem" height="25rem" />
             </Typography>
+            <Image
+              alt="Built with love by Mike Elsmore"
+              src="/images/mike-elsmore-white.svg"
+              width="25rem"
+              height="25rem"
+              className={styles.footer_bottombar_icons}
+            />
           </div>
         </div>
       </div>

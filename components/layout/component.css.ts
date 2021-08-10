@@ -3,4 +3,5 @@ import { vars } from '../../styles/var.css'
 
 export const header = style({
     fontFamily: `${vars.fontFamily.headings} !important`,
+    fontSize: '4em !important',
 });

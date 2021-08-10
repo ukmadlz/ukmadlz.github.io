@@ -7,9 +7,15 @@ export const footer = style({
 });
 export const footer_topbar = style({
     padding: "1rem",
+    '@media': {
+       print: {
+            display: 'none',
+        }
+    },
 });
 export const footer_topbar_flex = style({
     display: 'flex',
+    alignItems: "center",
 });
 export const footer_topbar_text = style({
     fontFamily: `${vars.fontFamily.headings} !important`,
@@ -26,4 +32,9 @@ export const footer_bottombar_flex = style({
 });
 export const footer_bottombar_copyright = style({
     flexGrow: 1,
+});
+export const footer_bottombar_icons = style({
+    display: 'inline-block',
+    position: 'relative',
+    top: '0.2rem'
 });

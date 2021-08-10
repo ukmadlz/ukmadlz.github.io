@@ -6,4 +6,9 @@ export const heroImage = style({
     height: "50vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+    '@media': {
+       print: {
+            display: 'none',
+        }
+    },
   });

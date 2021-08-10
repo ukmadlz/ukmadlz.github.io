@@ -4,6 +4,11 @@ import { vars } from '../../styles/var.css'
 export const appbar = style({
     flexWrap: 'wrap',
     fontFamily: vars.fontFamily.headings,
+    '@media': {
+        print: {
+            display: 'none !important',
+        }
+    }
 });
 export const toolbar = style({
     fontFamily: vars.fontFamily.headings,
@@ -25,4 +30,7 @@ export const navigation_link = style({
 export const navigation_link_text = style({
     color: vars.color.white,
     fontFamily: `${vars.fontFamily.headings} !important`,
+});
+export const navigation_link_text_icon = style({
+    width: "1.1rem"
 });

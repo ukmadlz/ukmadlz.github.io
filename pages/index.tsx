@@ -1,7 +1,3 @@
-import Head from '../components/head/component'
-import Navigation from '../components/navigation/component'
-import Hero from '../components/hero/component'
-import Footer from '../components/footer/component'
 import { Typography } from '@material-ui/core'
 import Layout from '../components/layout/component'
 
@@ -12,7 +8,7 @@ export default function Home() {
     color="orange-red"
     heroImageName="hackference-laugh"
   >
-  <Typography variant="subtitle1">As with most people in software, I spend most of my life at a keyboard, but I'm lucky that my hobby is my job. I spend my time helping others (and myself) to learn new things and occasionally solve different and difficult problems.</Typography>
+  <Typography>Mike Elsmore is a software developer, technologist, public speaker, and community builder who is passionate about developer outreach, education, and open source software. He is driven by the need to get involved with growing communities and with bringing technology to those with an interest or desire to learn. He has been involved in the Birmingham tech and hackathon scene for a long time, having founded //ackference and helped to spawn several other events.</Typography>
   </Layout>
   )
 }

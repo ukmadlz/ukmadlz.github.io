@@ -7,8 +7,8 @@ import * as styles from './component.css'
 
 const navigationLinks = [
     {
-        label: 'Engineering',
-        link: '/engineering'
+        label: 'Work',
+        link: '/work'
     },
     {
         label: 'Events',
@@ -25,6 +25,10 @@ const navigationLinks = [
     {
         label: 'Podcasting',
         link: '/podcasting'
+    },
+    {
+        label: <FontAwesomeIcon icon={faEnvelope} className={styles.navigation_link_text_icon} />,
+        link: '/contact'
     },
 ]
 
@@ -48,11 +52,10 @@ export default function NavigationComponent(): JSX.Element {
                             <Typography className={styles.navigation_link_text} >{link.label}</Typography>
                         </Link>
                     ))}
-                    <Link variant="button" className={styles.navigation_link} href="to:mike@elsmore.me" target="_blank">
-                        <Typography className={styles.navigation_link_text} ><FontAwesomeIcon icon={faEnvelope} /></Typography>
-                    </Link>
                     <Link variant="button" className={styles.navigation_link} href="https://twitter.com/ukmadlz" target="_blank">
-                        <Typography className={styles.navigation_link_text} ><FontAwesomeIcon icon={faTwitter} /></Typography>
+                        <Typography className={styles.navigation_link_text} >
+                            <FontAwesomeIcon icon={faTwitter} className={styles.navigation_link_text_icon} />
+                        </Typography>
                     </Link>
                 </nav>
             </Toolbar>
