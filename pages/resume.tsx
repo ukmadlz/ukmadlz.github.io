@@ -106,7 +106,7 @@ export default function Resume () {
           {socials(styles.contactLinkIcon).map((social, index) => {
             const displayLink = (social.name === "E-mail") ? "mike@elsmore.me" : social.link; 
             return (
-              <Grid item xs={6} md={12}  key={`social-contact-${index}`}>
+              <Grid item xs md={12}  key={`social-contact-${index}`}>
                 <Typography>
                   <Link href={social.link} target="_blank" className={styles.contactLinkText} >
                     {social.logo} {displayLink}
@@ -161,7 +161,7 @@ export default function Resume () {
       </Grid>
       <Grid item xs={12}>
         <Typography variant="h4" component="h2" color="textSecondary">
-          {`Job's`}
+          {`Jobs`}
         </Typography>
 
         <Card className={styles.job_card}>
@@ -175,7 +175,7 @@ export default function Resume () {
           />
           <CardContent>
             <Typography paragraph variant="body2">
-              {`During my time at Optic I took responsibility for beginning the program of specifying, designing, building, and releasing the inital Optic SDKs (with Node being the first released). Alongside this I did prototyping using Optic with other projects in the OSS world, as well as writing, some documentation work, and live streaming. On top of this I started looking into how to develop relationships with the existing community, as well as try to work out how to monitor the health of the existing OSS user base.`}
+              {`During my time at Optic, I took responsibility for beginning the program of specifying, designing, building, and releasing the initial Optic SDKs (with Node being the first released). Alongside this, I did prototyping using Optic with other projects in the OSS world, as well as writing, some documentation work, and live streaming. On top of this, I started looking into how to develop relationships with the existing community, as well as try to work out how to monitor the health of the existing OSS user base.`}
             </Typography>
           </CardContent>
         </Card>
@@ -207,7 +207,7 @@ export default function Resume () {
           />
           <CardContent>
             <Typography paragraph variant="body2">
-            {`Leading the redevelopment of it's current internal architecture to a smaller more repeatable (micro)service architecture. As well as development, I help with upskilling the team and when requested do Developer Relations tasks.`}
+            {`Leading the redevelopment of its current internal architecture to a smaller more repeatable (micro)service architecture. As well as development, I help with upskilling the team and when requested do Developer Relations tasks.`}
             </Typography>
             <Typography paragraph variant="body2">
             {`My primary tasks have been`}
@@ -232,7 +232,7 @@ export default function Resume () {
           />
           <CardContent>
             <Typography paragraph variant="body2">
-            {`Freelance software development in Nodejs &s; PHP, everything from building SDKs & client libraries to full stack development and systems architecture. Also specialising in consultancy around Developer Relations, with content delivery, developer onboarding, developer outreach and strategy execution.`}
+            {`Freelance software development in Nodejs & PHP, everything from building SDKs & client libraries to full-stack development and systems architecture. Also specialising in consultancy around Developer Relations, with content delivery, developer onboarding, developer outreach and strategy execution.`}
             </Typography>
           </CardContent>
         </Card>
@@ -248,7 +248,7 @@ export default function Resume () {
           />
           <CardContent>
             <Typography paragraph variant="body2">
-            {`Developer Advocate for Cloud Data Services, covering products like Cloudant, dashDB, Apache Spark and Graph Data Store. My core focus has been developer outreach in Europe through speaking at conferences, meetups and hackathons. I write conference talks, workshops and blog posts to support our online and offline research, as well as develop proof-of-concepts and prototypes around our technologies and others. Recently I've also taken ownership of client libraries for early stage products.`}
+            {`Developer Advocate for Cloud Data Services, covering products like Cloudant, dashDB, Apache Spark and Graph Data Store. My core focus has been developer outreach in Europe through speaking at conferences, meetups and hackathons. I write conference talks, workshops and blog posts to support our online and offline research, as well as develop proofs-of-concept and prototypes around our technologies and others. Recently I've also taken ownership of client libraries for early-stage products.`}
             </Typography>
           </CardContent>
         </Card>
@@ -287,7 +287,7 @@ export default function Resume () {
 
         <Card className={styles.job_card}>
           <CardHeader
-            title="BAM Agency - Web Develoer"
+            title="BAM Agency - Web Developer"
             subheader="January 2011 - December 2011"
             avatar={<Avatar
               alt="BAM Agency"
@@ -301,7 +301,7 @@ export default function Resume () {
             title="JB Global Ltd - SEO Specialist"
             subheader="June 2010 - December 2010"
             avatar={<Avatar
-              alt="JB Glocal Ltd"
+              alt="JB Global Ltd"
               src={companyAvatarUrl('jbglobal')}
             />}
           />
