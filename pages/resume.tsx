@@ -166,6 +166,22 @@ export default function Resume () {
 
         <Card className={styles.job_card}>
           <CardHeader
+            title="CloudQuery - Senior Developer Advocate"
+            subheader="October 2021 - Current"
+            avatar={<Avatar
+              alt="CloudQuery"
+              src={companyAvatarUrl('cloudquery')}
+            />}
+          />
+          <CardContent>
+            <Typography paragraph variant="body2">
+              {`At CloudQuery I've been primarily working towards content generation for using the CloudQuery itself, and the surrounding platforms to simplify usage, on top of that I've been incubating the community to start encouraging an ecosystem as well as adoption.`}
+            </Typography>
+          </CardContent>
+        </Card>
+
+        <Card className={styles.job_card}>
+          <CardHeader
             title="Optic Labs - Developer Advocate"
             subheader="May 2021 - July 2021"
             avatar={<Avatar
