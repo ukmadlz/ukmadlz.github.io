@@ -166,8 +166,24 @@ export default function Resume () {
 
         <Card className={styles.job_card}>
           <CardHeader
+            title="InfoSum - Lead Developer Advocate"
+            subheader="May 2022 - Current"
+            avatar={<Avatar
+              alt="InfoSum"
+              src={companyAvatarUrl('infosum')}
+            />}
+          />
+          <CardContent>
+            <Typography paragraph variant="body2">
+            
+            </Typography>
+          </CardContent>
+        </Card>
+
+        <Card className={styles.job_card}>
+          <CardHeader
             title="CloudQuery - Senior Developer Advocate"
-            subheader="October 2021 - Current"
+            subheader="October 2021 - April 2022"
             avatar={<Avatar
               alt="CloudQuery"
               src={companyAvatarUrl('cloudquery')}
