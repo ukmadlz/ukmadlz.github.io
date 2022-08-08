@@ -3,6 +3,7 @@ import Layout from '../components/layout/component'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { socials } from '../components/socials/component'
 import * as styles from '../styles/resume.css'
+import React from 'react'
 
 export default function Contact(): JSX.Element {
     return(<Layout
