@@ -8,7 +8,20 @@ import { socials } from '../components/socials/component'
 import * as styles from '../styles/resume.css'
 import Axios from 'axios'
 
-export default function Podcasts ({ podcasts }) {
+interface Podcast {
+  id: string,
+  title: string,
+  description: string,
+  url: string,
+  timestamp: Date,
+  type: string,
+  source: string,
+}
+interface PodcastsProps {
+  podcasts: [Podcast]
+}
+
+export default function Podcasts ({ podcasts }: PodcastsProps) {
   return (<Layout
     title="Podcasts"
     description="The podcasts that Mike has produced or been part of"
