@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import * as styles from './component.css'
+import React from 'react'
 
 const navigationLinks = [
     {
@@ -26,10 +27,10 @@ const navigationLinks = [
     //     label: 'Mentoring',
     //     link: '/mentoring'
     // },
-    // {
-    //     label: 'Podcasting',
-    //     link: '/podcasting'
-    // },
+    {
+        label: 'Podcasts',
+        link: '/podcasts'
+    },
     {
         label: <FontAwesomeIcon icon={faEnvelope} className={styles.navigation_link_text_icon} />,
         link: '/contact'

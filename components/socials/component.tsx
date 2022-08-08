@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faMedium, faTwitch, faTwitter, faDev, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import * as styles from './component.css'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 
 export function socials (styleOverride: string = '') {
   return [{
