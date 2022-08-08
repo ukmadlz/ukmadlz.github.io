@@ -34,7 +34,7 @@ export default function Podcasts ({ podcasts }) {
         </Typography>
         {podcasts.map(podcast => {
           return (
-            <Card>
+            <Card key={`${podcast.id}-episode`}>
               <Link href={podcast.url} target="_blank">
                 <CardHeader
                   title={podcast.title}
