@@ -176,7 +176,11 @@ export default function Resume () {
           />
           <CardContent>
             <Typography paragraph variant="body2">
-            
+              {`At InfoSum I was focused on the latest product release which was an API focused product for direct developer integration, as a next generation of the InfoSum Platform.
+              
+              During the initial release I spent my time integrating with engineering, product, and marketing to get everything right lined up for release to actual developers.
+              
+              My work was around representing possible developers within specifications stages, building out initial developer documentation portal, researching the OSS communities, and initial SDK development.`}
             </Typography>
           </CardContent>
         </Card>
