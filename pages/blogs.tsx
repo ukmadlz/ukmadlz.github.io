@@ -31,20 +31,10 @@ export default function Blogs ({ blogs }: BlogsProps) {
     <Grid container spacing={2}>
       <Grid item xs={12} md={12}>
         <Typography paragraph>
-          {`I'm lucky enough to have had the chance to start a couple of podcasts, as well as appear as a guest on others.`}
-        </Typography>
-        <Typography paragraph>
-          {`My current personal hobby podcast is `}
-          <Link href="https://anchor.fm/tech-off-topic" target="_blank">Tech: Off-topic</Link>
-          {` which is usually every other week with my friend `}
-          <Link href="https://twitter.com/secondej" target="_blank">Jim Seconds</Link>
-          {`.`}
+          {`I'm not a great writer, but here is some of what I've written across the internet.`}
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        <Typography variant="h4" component="h2" color="textSecondary">
-          {`Blog Posts`}
-        </Typography>
         {blogs.map(blog => {
           return (
             <Card key={`${blog.id}-episode`}>
