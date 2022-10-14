@@ -32,6 +32,10 @@ const navigationLinks = [
         link: '/podcasts'
     },
     {
+        label: 'Blogs',
+        link: '/blogs'
+    },
+    {
         label: <FontAwesomeIcon icon={faEnvelope} className={styles.navigation_link_text_icon} />,
         link: '/contact'
     },
