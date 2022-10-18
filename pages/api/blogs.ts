@@ -83,6 +83,16 @@ const wordpress = async (url: string, source: string) => {
   })
 }
 
+const localStorage = async () => {
+  const host = process.env.NEXT_PUBLIC_UKMADLZ_API || 'http://localhost:8888/'
+  const response = await fetch(`${host}blogs.json`, {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached\\
+  })
+  const articles = await response.json();
+  return articles.data;
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -90,11 +100,13 @@ export default async function handler(
   const logzArticles = await wordpress("https://logz.io/author/mike-elsmore/feed/", "logz.io");
   const devRelArticles = await wordpress("https://developerrelations.com/author/mikeelsmore/feed/", "developerrelations.com");
   const devToArticles = await devTo();
+  const localBlogs = await localStorage();
   res.status(200).json({
     data: [
         ...logzArticles,
         ...devRelArticles,
         ...devToArticles,
+        ...localBlogs,
     ]
         .sort((a: IArticle, b: IArticle) => {
         return (new Date(a.timestamp) < new Date(b.timestamp)) ? 1 : -1;

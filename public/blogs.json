@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "title": "Running AWS Foundational Security Best Practices with CloudQuery Policies",
+            "description": "Automate, customize, codify and run AWS Foundational Security Best Practices with CloudQuery Policies.",
+            "url": "https://www.cloudquery.io/blog/running-aws-foundational-security-best-practices-with-cloudquery-policies",
+            "timestamp": "2022-02-07T00:00:00Z",
+            "type": "docusaurus",
+            "source": "cloudquery"
+        },
+        {
+            "title": "Creating a Cross Project (or Account) Service Account in GCP Step-by-Step",
+            "description": "A walkthrough to add Service Accounts in Google Cloud Platform and make them cross-project",
+            "url": "https://www.cloudquery.io/blog/creating-cross-project-service-accounts-in-gcp",
+            "timestamp": "2021-11-09T00:00:00Z",
+            "type": "docusaurus",
+            "source": "cloudquery"
+        },
+        {
+            "title": "AWS SSO Tutorial with Google Workspace (Gsuite) as an IdP Step-by-Step",
+            "description": "A tutorial walking you through setting up AWS Single Sign-On withGoogle Workspace as an IdP",
+            "url": "https://www.cloudquery.io/blog/aws-sso-tutorial-with-google-workspace-as-an-idp",
+            "timestamp": "2021-10-26T00:00:00Z",
+            "type": "docusaurus",
+            "source": "cloudquery"
+        },
+        {
+            "title": "Keyless access to AWS in GitHub Actions with OIDC",
+            "description": "A guide to configuring OpenID Connect access to AWS from GitHub Actions",
+            "url": "https://www.cloudquery.io/blog/keyless-access-to-aws-in-github-actions-with-oidc",
+            "timestamp": "2022-03-28T00:00:00Z",
+            "type": "docusaurus",
+            "source": "cloudquery"
+        },
+        {
+            "title": "Why We Are Writing SDKs",
+            "description": "I’m new around here, and my first post is about something I really love… code that makes life easier!",
+            "url": "https://www.useoptic.com/blog/why-we-are-writing-sdks",
+            "timestamp": "2021-06-11T00:00:00Z",
+            "type": "docusaurus",
+            "source": "optic"
+        }
+    ]
+}
