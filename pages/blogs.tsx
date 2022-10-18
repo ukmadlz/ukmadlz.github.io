@@ -64,7 +64,10 @@ export default function Blogs ({ blogs }: BlogsProps) {
 }
 
 export async function getServerSideProps() {
-  const { data } = await Axios('http://api.elsmore.me/blogs')
+  console.log(process.env.NEXT_PUBLIC_UKMADLZ_API)
+  const { data } = await Axios('/api/blogs',{
+    baseURL: process.env.NEXT_PUBLIC_UKMADLZ_API || 'http://localhost:8888'
+  })
   const blogs = (data.data) ? data.data : [];
   // If there is a user, return it.
   return { props: { blogs } }

@@ -74,7 +74,7 @@ export default function Podcasts ({ podcasts }: PodcastsProps) {
 }
 
 export async function getServerSideProps() {
-  const { data } = await Axios('http://api.elsmore.me/podcasts')
+  const { data } = await Axios('http://localhost:8888/api/podcasts')
   const podcasts = (data.data) ? data.data : [];
   // If there is a user, return it.
   return { props: { podcasts } }
