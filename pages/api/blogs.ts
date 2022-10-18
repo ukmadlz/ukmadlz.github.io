@@ -85,7 +85,7 @@ const wordpress = async (url: string, source: string) => {
 
 const localStorage = async () => {
   const host = process.env.NEXT_PUBLIC_UKMADLZ_API || 'http://localhost:8888/'
-  const response = await fetch(`${host}blogs.json`, {
+  const response = await fetch(`${host}/blogs.json`, {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached\\
   })
