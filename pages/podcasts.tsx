@@ -74,7 +74,9 @@ export default function Podcasts ({ podcasts }: PodcastsProps) {
 }
 
 export async function getServerSideProps() {
-  const { data } = await Axios('http://localhost:8888/api/podcasts')
+  const { data } = await Axios('/api/podcasts',{
+    baseURL: process.env.NEXT_PUBLIC_UKMADLZ_API || 'http://localhost:8888'
+  })
   const podcasts = (data.data) ? data.data : [];
   // If there is a user, return it.
   return { props: { podcasts } }
