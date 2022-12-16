@@ -167,8 +167,19 @@ export default function Resume () {
 
         <Card className={styles.job_card}>
           <CardHeader
+            title="Infobip - Senior Developer Advocate"
+            subheader="November 2022 - Current"
+            avatar={<Avatar
+              alt="Infobip"
+              src={companyAvatarUrl('infobip')}
+            />}
+          />
+        </Card>
+
+        <Card className={styles.job_card}>
+          <CardHeader
             title="InfoSum - Lead Developer Advocate"
-            subheader="May 2022 - Current"
+            subheader="May 2022 - October 2022"
             avatar={<Avatar
               alt="InfoSum"
               src={companyAvatarUrl('infosum')}

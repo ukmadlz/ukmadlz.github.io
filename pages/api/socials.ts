@@ -16,9 +16,14 @@ export default function handler(
 ) {
   res.status(200).json({
     data: [{
-       id: "twitter",
-       name: "Twitter",
-       link: "https://twitter.com/ukmadlz", 
+      id: "twitter",
+      name: "Twitter",
+      link: "https://twitter.com/ukmadlz", 
+    },
+    {
+        id: "mastodon",
+        name: "Mastodon",
+        link: "https://mastodon.social/@ukmadlz", 
     },
     {
         id: "github",

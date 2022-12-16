@@ -1,6 +1,6 @@
 import { Link } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faMedium, faTwitch, faTwitter, faDev, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faMedium, faTwitch, faTwitter, faDev, faLinkedin, faMastodon } from '@fortawesome/free-brands-svg-icons';
 import * as styles from './component.css'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
@@ -10,6 +10,10 @@ export function socials (styleOverride: string = '') {
     name: 'Twitter',
     link: 'https://twitter.com/ukmadlz',
     logo: <FontAwesomeIcon icon={faTwitter} className={(styleOverride || styles.socialLinkIcon)}/>,
+  },{
+      name: "Mastodon",
+      link: "https://mastodon.social/@ukmadlz", 
+      logo: <FontAwesomeIcon icon={faMastodon} className={(styleOverride || styles.socialLinkIcon)}/>,
   },{
     name: 'GitHub',
     link: 'https://github.com/ukmadlz',
