@@ -1,5 +1,16 @@
 import Script from 'next/script';
+import { DOMAttributes } from 'react';
 import * as styles from './component.css'
+
+type CustomElement<T> = Partial<T & DOMAttributes<T> & { children: any }>;
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      ['the-claw-webring-widget']: CustomElement<any>;
+    }
+  }
+}
 
 export function WebringComponent() {
     return (<div className={styles.webringContainer}>

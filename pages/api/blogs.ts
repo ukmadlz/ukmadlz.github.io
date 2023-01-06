@@ -99,12 +99,14 @@ export default async function handler(
 ) {
   const logzArticles = await wordpress("https://logz.io/author/mike-elsmore/feed/", "logz.io");
   const devRelArticles = await wordpress("https://developerrelations.com/author/mikeelsmore/feed/", "developerrelations.com");
+  const infobipArticles = await wordpress("https://infobip.com/developers/blog/author/mike/feed", "infobip.com");
   const devToArticles = await devTo();
   const localBlogs = await localStorage();
   res.status(200).json({
     data: [
         ...logzArticles,
         ...devRelArticles,
+        ...infobipArticles,
         ...devToArticles,
         ...localBlogs,
     ]
