@@ -145,23 +145,6 @@ export default function Resume () {
       </Grid>
       <Grid item xs={12}>
         <Typography variant="h4" component="h2" color="textSecondary">
-          Skills
-        </Typography>
-
-        {skills.map((skill, index) => {
-          return (
-            <Tooltip key={`skill-icon-${index}`} title={skill.name} aria-label={skill.name}>
-              <Fab
-                size="small"
-              >
-                {skill.logo}
-              </Fab>
-            </Tooltip>)
-        })}
-
-      </Grid>
-      <Grid item xs={12}>
-        <Typography variant="h4" component="h2" color="textSecondary">
           {`Jobs`}
         </Typography>
 
