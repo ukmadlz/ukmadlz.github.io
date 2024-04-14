@@ -3,15 +3,15 @@ import { vars } from '../../styles/var.css'
 
 export const footer = style({
     color: vars.color.white,
-    marginTop: "1rem"
-});
-export const footer_topbar = style({
-    padding: "1rem",
+    marginTop: "1rem",
     '@media': {
        print: {
             display: 'none',
         }
     },
+});
+export const footer_topbar = style({
+    padding: "1rem",
 });
 export const footer_topbar_flex = style({
     display: 'flex',

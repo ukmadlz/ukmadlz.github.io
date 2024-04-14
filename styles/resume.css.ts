@@ -3,6 +3,11 @@ import { vars } from '../styles/var.css'
 
 export const contactLinkText = style({
   color: `${vars.color.black} !important`,
+  "@media": {
+    print: {
+      fontSize: "0.85rem",
+    }
+  }
 })
 export const contactLinkIcon = style({
   width: "1rem",
@@ -22,6 +27,14 @@ export const job_card = style({
   "@media": {
     print: {
       margin: "0.1rem 0",
+    }
+  }
+});
+export const job_card_hidden = style({
+  margin: "0.25rem 0",
+  "@media": {
+    print: {
+      display: "none",
     }
   }
 });

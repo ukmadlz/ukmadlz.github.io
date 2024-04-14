@@ -9,74 +9,6 @@ import Layout from '../components/layout/component'
 import { socials } from '../components/socials/component'
 import * as styles from '../styles/resume.css'
 
-const skills = [{
-  name: 'React',
-  logo: <FontAwesomeIcon icon={faReact} className={styles.skillsIcon}/>,
-},{
-  name: 'Node',
-  logo: <FontAwesomeIcon icon={faNodeJs} className={styles.skillsIcon}/>,
-},{
-  name: 'PHP',
-  logo: <FontAwesomeIcon icon={faPhp} className={styles.skillsIcon}/>,
-},{
-  name: 'AWS',
-  logo: <FontAwesomeIcon icon={faAws} className={styles.skillsIcon}/>,
-},{
-  name: 'Algolia',
-  logo: <FontAwesomeIcon icon={faAlgolia} className={styles.skillsIcon}/>,
-},{
-  name: 'BitBucket',
-  logo: <FontAwesomeIcon icon={faBitbucket} className={styles.skillsIcon}/>,
-},{
-  name: 'Digital Ocean',
-  logo: <FontAwesomeIcon icon={faDigitalOcean} className={styles.skillsIcon}/>,
-},{
-  name: 'Docker',
-  logo: <FontAwesomeIcon icon={faDocker} className={styles.skillsIcon}/>,
-},{
-  name: 'GitHub',
-  logo: <FontAwesomeIcon icon={faGithub} className={styles.skillsIcon}/>,
-},{
-  name: 'HTML5',
-  logo: <FontAwesomeIcon icon={faHtml5} className={styles.skillsIcon}/>,
-},{
-  name: 'CSS3',
-  logo: <FontAwesomeIcon icon={faCss3} className={styles.skillsIcon}/>,
-},{
-  name: 'JS',
-  logo: <FontAwesomeIcon icon={faJs} className={styles.skillsIcon}/>,
-},{
-  name: 'Laravel',
-  logo: <FontAwesomeIcon icon={faLaravel} className={styles.skillsIcon}/>,
-},{
-  name: 'Linux',
-  logo: <FontAwesomeIcon icon={faLinux} className={styles.skillsIcon}/>,
-},{
-  name: 'Stack Overflow',
-  logo: <FontAwesomeIcon icon={faStackOverflow} className={styles.skillsIcon}/>,
-},{
-  name: 'Stripe',
-  logo: <FontAwesomeIcon icon={faStripe} className={styles.skillsIcon}/>,
-},{
-  name: 'Yarn',
-  logo: <FontAwesomeIcon icon={faYarn} className={styles.skillsIcon}/>,
-},{
-  name: 'Cloudflare',
-  logo: <FontAwesomeIcon icon={faCloudflare} className={styles.skillsIcon}/>,
-},{
-  name: 'Azure',
-  logo: <FontAwesomeIcon icon={faMicrosoft} className={styles.skillsIcon}/>,
-},{
-  name: 'CircleCI',
-  logo: (<Image
-    alt="CircleCI"
-    src="https://res.cloudinary.com/elsmore-me/image/upload/elsmore.me/icons/circleci"
-    className={styles.skillsIcon}
-    width="25rem"
-    height="25rem" 
-  />),
-}];
-
 const companyAvatarUrl = (imageName: string) => {
   return buildUrl(`elsmore.me/company/${imageName}`, {
     cloud: {
@@ -294,7 +226,7 @@ export default function Resume () {
           </CardContent>
         </Card>
 
-        <Card className={styles.job_card}>
+        <Card className={styles.job_card_hidden}>
           <CardHeader
             title="Blubolt - Develoer"
             subheader="April 2014 - September 2014"
@@ -310,7 +242,7 @@ export default function Resume () {
           </CardContent>
         </Card>
 
-        <Card className={styles.job_card}>
+        <Card className={styles.job_card_hidden}>
           <CardHeader
             title="Winning Moves Ltd - PHP Develoer"
             subheader="December 2011 - February 2014"
@@ -326,7 +258,7 @@ export default function Resume () {
           </CardContent>
         </Card>
 
-        <Card className={styles.job_card}>
+        <Card className={styles.job_card_hidden}>
           <CardHeader
             title="BAM Agency - Web Developer"
             subheader="January 2011 - December 2011"
@@ -337,7 +269,7 @@ export default function Resume () {
           />
         </Card>
 
-        <Card className={styles.job_card}>
+        <Card className={styles.job_card_hidden}>
           <CardHeader
             title="JB Global Ltd - SEO Specialist"
             subheader="June 2010 - December 2010"
@@ -348,7 +280,7 @@ export default function Resume () {
           />
         </Card>
 
-        <Card className={styles.job_card}>
+        <Card className={styles.job_card_hidden}>
           <CardHeader
             title="10Yetis / Petoba - Web Developer & Support"
             subheader="November 2008 - June 2010"
