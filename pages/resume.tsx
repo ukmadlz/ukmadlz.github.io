@@ -93,7 +93,7 @@ export default function Resume () {
             <Typography paragraph variant="body2">
               {`Working at Infobip has meant being quite cross-disciplinary, working with several departments covering a spectrum of tasks.
               
-              The primary tasks & initiatives that I have lead have been developer marketing and outreach through events, content, and community building & management.
+              The primary tasks & initiatives that I have led have been developer marketing and outreach through events, content, and community building & management.
               
               I’ve also taken a key role in strengthening the developer experience of using Infobip with documentation, including the release of a new docs platform, management of our SDKs, and continued involvement with engineering to maintain the quality of the APIs being released.
 `}
