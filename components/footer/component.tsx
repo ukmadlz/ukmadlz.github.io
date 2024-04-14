@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import SocialList from '../socials/component'
 import * as styles from './component.css'
+import { WebringComponent } from '../webring/component'
 
 export default function FooterComponent({ color }: any): JSX.Element {
   return (
@@ -46,6 +47,7 @@ export default function FooterComponent({ color }: any): JSX.Element {
           </div>
         </div>
       </div>
+      <WebringComponent/>
     </footer>
   )
 }
