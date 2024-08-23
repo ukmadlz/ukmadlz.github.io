@@ -91,9 +91,10 @@ export default function Resume () {
           />
           <CardContent>
             <Typography paragraph variant="body2">
-              {`Freelance developer relations and javascript/typescript engineering, mostly around written content creation, SDK maintenance, and API development
-
-                Worked with:`}
+              {`Freelance developer relations and javascript/typescript engineering, mostly around written content creation, SDK maintenance, and API development`}
+            </Typography>
+            <Typography paragraph variant="body2">
+            {` Worked with:`}
               <ul>
                 <li>Mozilla Foundation</li>
               </ul>
