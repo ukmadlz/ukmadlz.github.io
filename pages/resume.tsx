@@ -82,16 +82,23 @@ export default function Resume () {
 
         <Card className={styles.job_card}>
           <CardHeader
-            title="Elsmore Consulting (Freelance"
+            title="Elsmore Consulting (Freelance)"
             subheader="July 2024 - Current"
+            avatar={<Avatar
+              alt="BuiltByMe"
+              src={companyAvatarUrl('builtbyme')}
+            />}
           />
           <CardContent>
             <Typography paragraph variant="body2">
               {`Freelance developer relations and javascript/typescript engineering, mostly around written content creation, SDK maintenance, and API development
 
-                Worked with:
-                - Mozilla Foundation`}
+                Worked with:`}
+              <ul>
+                <li>Mozilla Foundation</li>
+              </ul>
             </Typography>
+            
           </CardContent>
         </Card>
         
