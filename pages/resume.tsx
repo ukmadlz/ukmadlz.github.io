@@ -82,8 +82,23 @@ export default function Resume () {
 
         <Card className={styles.job_card}>
           <CardHeader
+            title="Elsmore Consulting (Freelance"
+            subheader="July 2024 - Current"
+          />
+          <CardContent>
+            <Typography paragraph variant="body2">
+              {`Freelance developer relations and javascript/typescript engineering, mostly around written content creation, SDK maintenance, and API development
+
+                Worked with:
+                - Mozilla Foundation`}
+            </Typography>
+          </CardContent>
+        </Card>
+        
+        <Card className={styles.job_card}>
+          <CardHeader
             title="Infobip - Senior Developer Advocate"
-            subheader="November 2022 - Current"
+            subheader="November 2022 - May 2024"
             avatar={<Avatar
               alt="Infobip"
               src={companyAvatarUrl('infobip')}
