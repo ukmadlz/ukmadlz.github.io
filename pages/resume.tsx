@@ -126,7 +126,7 @@ export default function Resume() {
             />
             <CardContent>
               <Typography paragraph variant="body2">
-                {`Freelance developer relations and javascript/typescript engineering, mostly around written content creation, SDK maintenance, and API development.`}
+                {`Freelance javascript/typescript engineering and developer relations consulting. Mostlydoing senior engineering, architecture, SDK maintenance, API governance & development, and content creation.`}
               </Typography>
               <Typography paragraph variant="body2">
                 {` Worked with:`}
@@ -156,10 +156,7 @@ export default function Resume() {
               <Typography paragraph variant="body2">
                 {`Working at Infobip has meant being quite cross-disciplinary, working with several departments covering a spectrum of tasks.
 
-              The primary tasks & initiatives that I have led have been developer marketing and outreach through events, content, and community building & management.
-
-              I’ve also taken a key role in strengthening the developer experience of using Infobip with documentation, including the release of a new docs platform, management of our SDKs, and continued involvement with engineering to maintain the quality of the APIs being released.
-`}
+                As the senior engineering resource for the developer relations teams I covered the following tasks, as well as general developer experience work, developer marketing, and community building`}
                 <ul>
                   <li>
                     Development, maintenance, and management of Infobip public
@@ -175,6 +172,8 @@ export default function Resume() {
                     operations
                   </li>
                   <li>Moved documentation to a docs-as-code platform</li>
+                  <li>Online community management</li>
+                  <li>Event organising, logisitics, and speaking</li>
                 </ul>
               </Typography>
             </CardContent>
