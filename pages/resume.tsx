@@ -110,19 +110,6 @@ export default function Resume() {
           <Typography paragraph>
             {`I consider myself a backend engineer, but I throw my hands at most things, learning DevOps, Developer Tooling, React, and anything else useful in multiple roles. After learning these new skills I happily teach others, either through mentoring, talks, or just helping out where I can.`}
           </Typography>
-          /*
-          <Typography paragraph>
-            {`I wasn't kidding when I say my hobbies revolve around code, I can often be found outside of work `}
-            <Link href="https://twitch.tv/ukmadlz" target="_blank">
-              streaming on Twitch
-            </Link>
-            {` building something or other, or even doing maintenance. I've also been running or helping to run developer events for the better part of a decade, and recently taken up `}
-            <Link href="https://anchor.fm/tech-off-topic" target="_blank">
-              tech podcasting
-            </Link>
-            {` to keep myself busy.`}
-          </Typography>
-          */
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h4" component="h2" color="textSecondary">
