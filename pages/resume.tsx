@@ -160,6 +160,22 @@ export default function Resume() {
 
               I’ve also taken a key role in strengthening the developer experience of using Infobip with documentation, including the release of a new docs platform, management of our SDKs, and continued involvement with engineering to maintain the quality of the APIs being released.
 `}
+                <ul>
+                  <li>
+                    Development, maintenance, and management of Infobip public
+                    SDKs
+                  </li>
+                  <li>Development and operation of sample applications</li>
+                  <li>
+                    Development and operation of booth demos and data collection
+                    tooling
+                  </li>
+                  <li>
+                    Development of internal tooling for community management and
+                    operations
+                  </li>
+                  <li>Moved documentation to a docs-as-code platform</li>
+                </ul>
               </Typography>
             </CardContent>
           </Card>
