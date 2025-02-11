@@ -115,6 +115,21 @@ export default function Resume() {
           <Typography variant="h4" component="h2" color="textSecondary">
             {`Jobs`}
           </Typography>
+          
+          <Card className={styles.job_card}>
+            <CardHeader
+              title="Directus - Developer Experience Engineer"
+              subheader="November 2024 - Current"
+              avatar={
+                <Avatar alt="Directus" src={companyAvatarUrl("directus")} />
+              }
+            />
+            <CardContent>
+              <Typography paragraph variant="body2">
+                {`Focused on improving the developer experience for Directus around extensions and it's ecosystem`}
+              </Typography>
+            </CardContent>
+          </Card>
 
           <Card className={styles.job_card}>
             <CardHeader
@@ -126,7 +141,7 @@ export default function Resume() {
             />
             <CardContent>
               <Typography paragraph variant="body2">
-                {`Freelance javascript/typescript engineering and developer relations consulting. Mostlydoing senior engineering, architecture, SDK maintenance, API governance & development, and content creation.`}
+                {`Freelance javascript/typescript engineering and developer relations consulting. Mostly doing senior engineering, architecture, SDK maintenance, API governance & development, and content creation.`}
               </Typography>
               <Typography paragraph variant="body2">
                 {` Worked with:`}
