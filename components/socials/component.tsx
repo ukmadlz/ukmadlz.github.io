@@ -7,10 +7,6 @@ import React from 'react';
 
 export function socials (styleOverride: string = '') {
   return [{
-    name: 'Twitter',
-    link: 'https://twitter.com/ukmadlz',
-    logo: <FontAwesomeIcon icon={faTwitter} className={(styleOverride || styles.socialLinkIcon)}/>,
-  },{
       name: "Mastodon",
       link: "https://mastodon.social/@ukmadlz", 
       logo: <FontAwesomeIcon icon={faMastodon} className={(styleOverride || styles.socialLinkIcon)}/>,
