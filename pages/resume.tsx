@@ -126,7 +126,9 @@ export default function Resume() {
             />
             <CardContent>
               <Typography paragraph variant="body2">
-                {`Focused on improving the developer experience for Directus around extensions and it's ecosystem`}
+                {`Focused on improving the developer experience for Directus around extensions and its ecosystem.
+                
+                This included the development and improvements to tooling and processes for shipping JS/TS extensions, as well as the management of outsourced engineers building feature extensions for the Directus platform.`}
               </Typography>
             </CardContent>
           </Card>
@@ -171,7 +173,7 @@ export default function Resume() {
               <Typography paragraph variant="body2">
                 {`Working at Infobip has meant being quite cross-disciplinary, working with several departments covering a spectrum of tasks.
 
-                As the senior engineering resource for the developer relations teams I covered the following tasks, as well as general developer experience work, developer marketing, and community building`}
+                As the senior engineering resource for the developer relations team I covered the following tasks, as well as general developer experience work, developer marketing, and community building`}
                 <ul>
                   <li>
                     Development, maintenance, and management of Infobip public
