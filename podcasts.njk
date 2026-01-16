@@ -1,0 +1,72 @@
+---
+layout: layouts/base.njk
+title: "Podcasts"
+permalink: /podcasts/index.html
+---
+
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-8">{{ title }}</h1>
+
+    <section class="bg-white rounded-lg shadow-sm p-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex-shrink-0">
+                <div class="w-48 h-48 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center">
+                    <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Tech: Off-topic</h2>
+                <p class="text-gray-600 mb-4">Hosted by Mike Elsmore & Jim Seconde</p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    A biweekly personal hobby podcast that covers technology news, industry developments, and tangential conversations. We usually go off-topic, covering everything from software developments to pop culture. The show features regular guests discussing DevRel, developer experience, AI, open source, and the latest happenings in the tech world.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://open.spotify.com/show/techofftopic" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Spotify
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-12">
+        <h2 class="text-2xl font-semibold mb-6 border-b-2 border-gray-200 pb-2">Topics We Cover</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                <div class="text-3xl mb-2">💻</div>
+                <p class="font-medium text-gray-700">Developer Experience</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                <div class="text-3xl mb-2">🤖</div>
+                <p class="font-medium text-gray-700">AI & ChatGPT</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                <div class="text-3xl mb-2">🌐</div>
+                <p class="font-medium text-gray-700">Open Source</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                <div class="text-3xl mb-2">☁️</div>
+                <p class="font-medium text-gray-700">Cloud & Infrastructure</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                <div class="text-3xl mb-2">👥</div>
+                <p class="font-medium text-gray-700">Community Building</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                <div class="text-3xl mb-2">📱</div>
+                <p class="font-medium text-gray-700">Tech Industry News</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                <div class="text-3xl mb-2">🎮</div>
+                <p class="font-medium text-gray-700">Pop Culture</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                <div class="text-3xl mb-2">🎙️</div>
+                <p class="font-medium text-gray-700">Guest Interviews</p>
+            </div>
+        </div>
+    </section>
+</div>

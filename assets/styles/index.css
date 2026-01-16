@@ -1,0 +1,153 @@
+@import 'tailwindcss';
+
+/* Blog content styling */
+.blog-content {
+    @apply text-gray-700 leading-relaxed overflow-hidden;
+}
+
+.blog-content h1 {
+    @apply text-3xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-gray-200;
+}
+
+.blog-content h2 {
+    @apply text-2xl font-semibold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-gray-200;
+}
+
+.blog-content h3 {
+    @apply text-xl font-semibold text-gray-900 mt-6 mb-3;
+}
+
+.blog-content h4 {
+    @apply text-lg font-semibold text-gray-900 mt-4 mb-2;
+}
+
+.blog-content p {
+    @apply mb-4;
+}
+
+.blog-content a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+.blog-content ul {
+    @apply list-disc list-inside mb-4 space-y-2;
+}
+
+.blog-content ol {
+    @apply list-decimal list-inside mb-4 space-y-2;
+}
+
+.blog-content li {
+    @apply text-gray-700;
+}
+
+.blog-content blockquote {
+    @apply border-l-4 border-blue-500 pl-4 py-2 my-4 bg-blue-50 italic text-gray-600;
+}
+
+.blog-content pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 text-sm;
+}
+
+.blog-content code {
+    @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.blog-content pre code {
+    @apply bg-transparent text-gray-100 p-0;
+}
+
+.blog-content img {
+    @apply rounded-lg shadow-md my-6 max-w-full h-auto;
+}
+
+.blog-content hr {
+    @apply my-8 border-gray-200;
+}
+
+.blog-content table {
+    @apply w-full mb-4 border-collapse;
+}
+
+.blog-content th {
+    @apply bg-gray-100 border border-gray-300 px-4 py-2 text-left font-semibold;
+}
+
+.blog-content td {
+    @apply border border-gray-300 px-4 py-2;
+}
+
+.blog-content strong {
+    @apply font-semibold text-gray-900;
+}
+
+.blog-content em {
+    @apply italic;
+}
+
+/* Embedded content (social posts, videos, etc.) */
+.blog-content iframe {
+    @apply my-6 mx-auto max-w-full rounded-lg;
+}
+
+.blog-content .twitter-tweet,
+.blog-content .twitter-tweet-rendered {
+    @apply mx-auto my-6;
+}
+
+/* Twitter/X iframe embeds from dev.to */
+.blog-content iframe.tweet-embed {
+    @apply block mx-auto my-6;
+    width: 550px;
+    max-width: 100%;
+    min-height: 250px;
+    height: auto;
+    border: none;
+}
+
+/* Contain paragraphs with tweet embeds */
+.blog-content p:has(iframe.tweet-embed) {
+    @apply overflow-hidden max-w-full;
+}
+
+.blog-content .instagram-media {
+    @apply mx-auto my-6;
+}
+
+.blog-content .ltag__twitter-tweet,
+.blog-content .ltag__youtube,
+.blog-content .ltag__github,
+.blog-content .ltag__link {
+    @apply my-6 flex justify-center;
+}
+
+.blog-content .ltag__youtube iframe,
+.blog-content .embed-youtube,
+.blog-content .video-wrapper {
+    @apply w-full aspect-video rounded-lg;
+}
+
+/* Center any div that contains an embed */
+.blog-content > div:has(iframe),
+.blog-content > p:has(iframe) {
+    @apply flex justify-center my-6;
+}
+
+/* Ensure embeds don't overflow */
+.blog-content .embed,
+.blog-content [class*="embed"],
+.blog-content [class*="ltag"] {
+    @apply max-w-full overflow-hidden;
+}
+
+/* Responsive video containers */
+.blog-content .video-container,
+.blog-content .embed-container {
+    @apply relative w-full my-6;
+    padding-bottom: 56.25%;
+}
+
+.blog-content .video-container iframe,
+.blog-content .embed-container iframe {
+    @apply absolute top-0 left-0 w-full h-full;
+}
