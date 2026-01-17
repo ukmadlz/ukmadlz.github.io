@@ -38,6 +38,7 @@ export default {
     ],
     navigation: [
         { name: "Resume/CV", url: "/resume/" },
+        { name: "Talks", url: "/talks/" },
         { name: "Podcasts", url: "/podcasts/" },
         { name: "Blog", url: "/blog/" },
         { name: "Contact", url: "/contact/" }

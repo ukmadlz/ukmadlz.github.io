@@ -1,0 +1,122 @@
+---
+layout: layouts/base.njk
+title: "Talks"
+permalink: /talks/index.html
+---
+
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-4">{{ title }}</h1>
+    <p class="text-lg text-gray-600 mb-8">Conference talks, presentations, and speaking engagements.</p>
+
+    {% if talks.length > 0 %}
+    <div class="space-y-8">
+        {% for talk in talks %}
+        <article class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div class="md:flex">
+                {% if talk.youtube_id %}
+                <div class="md:w-80 flex-shrink-0">
+                    <a href="/talks/{{ talk.slug }}/" class="block relative group">
+                        <img
+                            src="{{ talk.thumbnail }}"
+                            alt="{{ talk.title }}"
+                            class="w-full h-48 md:h-full object-cover"
+                            onerror="this.src='https://img.youtube.com/vi/{{ talk.youtube_id }}/hqdefault.jpg'"
+                        >
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                <div class="p-6 flex-grow">
+                    <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
+                        <h2 class="text-xl font-semibold text-gray-900">
+                            <a href="/talks/{{ talk.slug }}/" class="hover:text-blue-600 transition-colors">
+                                {{ talk.title }}
+                            </a>
+                        </h2>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 mb-3">
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            {{ talk.date | date("MMMM D, YYYY") }}
+                        </span>
+                        {% if talk.event %}
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                            {% if talk.event_url %}
+                            <a href="{{ talk.event_url }}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+                                {{ talk.event }}
+                            </a>
+                            {% else %}
+                            {{ talk.event }}
+                            {% endif %}
+                        </span>
+                        {% endif %}
+                        {% if talk.location %}
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            {{ talk.location }}
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                        {% if talk.youtube_id %}
+                        <a href="/talks/{{ talk.slug }}/" class="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm font-medium">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            Watch Talk
+                        </a>
+                        {% endif %}
+                        {% if talk.slides_url %}
+                        <a href="{{ talk.slides_url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                            View Slides
+                        </a>
+                        {% endif %}
+                        <a href="/talks/{{ talk.slug }}/" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                            View Details
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="bg-gray-50 rounded-lg p-8 text-center">
+        <svg class="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+        </svg>
+        <p class="text-gray-600">No talks available yet. Check back soon!</p>
+    </div>
+    {% endif %}
+
+    <section class="mt-12 bg-blue-50 rounded-lg p-6">
+        <h2 class="text-xl font-semibold mb-2">Interested in having me speak?</h2>
+        <p class="text-gray-700 mb-4">I'm available for conference talks, meetups, and workshops on topics including developer experience, APIs, databases, and community building.</p>
+        <a href="/contact/" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+            Get in Touch
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+        </a>
+    </section>
+</div>
