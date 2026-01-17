@@ -1,6 +1,17 @@
 import { createDirectus, rest, createItem, staticToken } from '@directus/sdk';
 import 'dotenv/config';
 
+// Validate required environment variables
+const requiredEnvVars = ['DIRECTUS_URL', 'DIRECTUS_TOKEN'];
+const missingVars = requiredEnvVars.filter(varName => !process.env[varName]);
+
+if (missingVars.length > 0) {
+    console.error('Error: Missing required environment variables:');
+    missingVars.forEach(varName => console.error(`  - ${varName}`));
+    console.error('\nPlease set these variables in your .env file or environment.');
+    process.exit(1);
+}
+
 const directus = createDirectus(process.env.DIRECTUS_URL)
     .with(staticToken(process.env.DIRECTUS_TOKEN))
     .with(rest());
@@ -35,6 +46,12 @@ const posts = [
 async function fetchPostContent(url) {
     try {
         const response = await fetch(url);
+
+        if (!response.ok) {
+            console.error(`  - HTTP error ${response.status} ${response.statusText} fetching ${url}`);
+            return null;
+        }
+
         const html = await response.text();
 
         // Infobip developer blog uses article content
