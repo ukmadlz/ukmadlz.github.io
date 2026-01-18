@@ -1,6 +1,9 @@
 name: Build and Deploy to GitHub Pages
 
 on:
+  repository_dispatch:
+    # Specify the event types on which the flow should be triggered
+    types: [content]
   push:
     branches:
       - main
