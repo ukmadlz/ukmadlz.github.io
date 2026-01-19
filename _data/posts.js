@@ -15,7 +15,7 @@ export default async () => {
             post.content = cloudinaryImage(post.content);
         }
         if(post.image) {
-            post.image = cloudinaryImage(post.image)
+            post.image = `https://res.cloudinary.com/elsmore-me/image/upload/elsmore.me/${post.image}`
         }
         return post;
     });
