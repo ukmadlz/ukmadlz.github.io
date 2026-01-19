@@ -10,31 +10,28 @@ eleventyComputed:
 ---
 
 <article class="max-w-4xl mx-auto">
+    {% if post.image %}
+    <div class="mb-8 -mx-4 md:mx-0">
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="w-full h-64 md:h-96 object-cover md:rounded-xl">
+    </div>
+    {% endif %}
+
     <h1 class="text-4xl font-bold mb-8">{{ post.title }}</h1>
 
     <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-        <div class="flex flex-col md:flex-row gap-8">
-            {% if post.image %}
-            <div class="flex-shrink-0">
-                <img src="{{ post.image }}" alt="{{ post.title }}" class="w-full md:w-48 h-48 object-cover rounded-xl">
-            </div>
-            {% endif %}
-            <div class="flex-grow">
-                <div class="flex items-center gap-4 text-gray-500 mb-4">
-                    <time datetime="{{ post.published_date }}" class="text-sm">
-                        {{ post.published_date | date("MMMM D, YYYY") }}
-                    </time>
-                </div>
-                {% if post.origin %}
-                <p class="text-sm text-gray-600">
-                    Originally published on
-                    <a href="{{ post.origin }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-medium hover:underline">
-                        {{ post.origin | hostname }}
-                    </a>
-                </p>
-                {% endif %}
-            </div>
+        <div class="flex items-center gap-4 text-gray-500 mb-4">
+            <time datetime="{{ post.published_date }}" class="text-sm">
+                {{ post.published_date | date("MMMM D, YYYY") }}
+            </time>
         </div>
+        {% if post.origin %}
+        <p class="text-sm text-gray-600">
+            Originally published on
+            <a href="{{ post.origin }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-medium hover:underline">
+                {{ post.origin | hostname }}
+            </a>
+        </p>
+        {% endif %}
     </section>
 
     <section class="bg-white rounded-lg shadow-sm p-8">
