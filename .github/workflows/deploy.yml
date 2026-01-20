@@ -48,6 +48,8 @@ jobs:
         run: npm run build
         env:
           DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
+          POSTHOG_KEY: ${{ secrets.POSTHOG_KEY }}
+          POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
