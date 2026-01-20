@@ -23,7 +23,8 @@
       api_host:'{{ site.posthogHost }}',
       person_profiles: 'identified_only',
       persistence: 'localStorage+cookie',
-      opt_out_capturing_by_default: true
+      opt_out_capturing_by_default: true,
+      capture_exceptions: true
     })
   </script>
   {% endif %}
