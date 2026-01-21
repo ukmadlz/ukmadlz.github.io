@@ -1,0 +1,28 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>{{ site.title }} - Blog</title>
+        <link>{{ site.url }}/blog/</link>
+        <description>{{ site.description }}</description>
+        <language>en-gb</language>
+        <managingEditor>{{ site.email }} ({{ site.author }})</managingEditor>
+        <webMaster>{{ site.email }} ({{ site.author }})</webMaster>
+        <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml"/>
+        {% if posts.length > 0 %}<lastBuildDate>{{ posts[0].published_date | dateToRfc822 }}</lastBuildDate>{% endif %}
+        {% for post in posts %}
+        <item>
+            <title>{{ post.title }}</title>
+            <link>{{ site.url }}/blog/{{ post.slug }}/</link>
+            <guid isPermaLink="true">{{ site.url }}/blog/{{ post.slug }}/</guid>
+            <pubDate>{{ post.published_date | dateToRfc822 }}</pubDate>
+            <author>{{ site.email }} ({{ site.author }})</author>
+            {% if post.excerpt %}<description><![CDATA[{{ post.excerpt }}]]></description>{% endif %}
+            {% if post.content %}<content:encoded><![CDATA[{{ post.content | safe }}]]></content:encoded>{% endif %}
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

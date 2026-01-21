@@ -18,6 +18,13 @@ export default function (eleventyConfig) {
     }
   });
 
+  // Add RFC 822 date filter for RSS feeds
+  eleventyConfig.addFilter("dateToRfc822", (dateObj) => {
+    if (!dateObj) return '';
+    const date = new Date(dateObj);
+    return date.toUTCString();
+  });
+
   // Add date filter for formatting dates
   eleventyConfig.addFilter("date", (dateObj, format) => {
     if (!dateObj) return '';
