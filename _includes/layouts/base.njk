@@ -197,7 +197,18 @@
 
       declineBtn.addEventListener('click', function() {
         localStorage.setItem(CONSENT_KEY, 'declined');
-        posthog.opt_out_capturing();
+
+        // Temporarily opt-in to capture the decline event
+        posthog.opt_in_capturing();
+        posthog.capture('consent_declined', {
+          consent_type: 'cookie_tracking'
+        });
+
+        // Delay opt-out to ensure event is sent
+        setTimeout(function() {
+          posthog.opt_out_capturing();
+        }, 100);
+
         if (typeof _gs !== 'undefined') {
           _gs('set', 'trackLocal', false);
         }
