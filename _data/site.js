@@ -4,6 +4,7 @@ export default {
     title: "Mike Elsmore",
     posthogKey: process.env.POSTHOG_KEY || '',
     posthogHost: process.env.POSTHOG_HOST || 'https://eu.i.posthog.com',
+    goSquaredId: process.env.GOSQUARED_ID || '',
     description: "Developer, Technologist, Speaker, Community Organiser",
     author: "Mike Elsmore",
     url: "https://elsmore.me",

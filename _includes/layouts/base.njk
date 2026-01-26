@@ -29,6 +29,20 @@
     })
   </script>
   {% endif %}
+  {% if site.goSquaredId %}
+  <script>
+    !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(arguments)};
+    d=s.createElement(q);d.src='//d1l6p2sc9645hc.cloudfront.net/gosquared.js';
+    q=s.getElementsByTagName(q)[0];q.parentNode.insertBefore(d,q)}
+    (window,document,'script','_gs');
+    _gs('{{ site.goSquaredId }}');
+    _gs('set', 'anonymizeIP', true);
+    // Respect consent - disable tracking by default
+    if (localStorage.getItem('cookie_consent') !== 'accepted') {
+      _gs('set', 'trackLocal', false);
+    }
+  </script>
+  {% endif %}
 </head>
 <body class="min-h-screen flex flex-col bg-gray-50">
   <header class="bg-gray-900 shadow-sm sticky top-0 z-50">
@@ -175,12 +189,18 @@
       acceptBtn.addEventListener('click', function() {
         localStorage.setItem(CONSENT_KEY, 'accepted');
         posthog.opt_in_capturing();
+        if (typeof _gs !== 'undefined') {
+          _gs('set', 'trackLocal', true);
+        }
         banner.classList.add('hidden');
       });
 
       declineBtn.addEventListener('click', function() {
         localStorage.setItem(CONSENT_KEY, 'declined');
         posthog.opt_out_capturing();
+        if (typeof _gs !== 'undefined') {
+          _gs('set', 'trackLocal', false);
+        }
         banner.classList.add('hidden');
       });
     })();

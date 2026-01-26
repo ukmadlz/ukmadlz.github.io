@@ -50,6 +50,7 @@ jobs:
           DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
           POSTHOG_KEY: ${{ secrets.POSTHOG_KEY }}
           POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }}
+          GOSQUARED_ID: ${{ secrets.GOSQUARED_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
