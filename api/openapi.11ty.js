@@ -83,6 +83,25 @@ export default class {
                             }
                         }
                     }
+                },
+                '/api/jobs.json': {
+                    get: {
+                        summary: 'Get work history',
+                        operationId: 'getJobs',
+                        tags: ['Jobs'],
+                        responses: {
+                            '200': {
+                                description: 'List of jobs (work history)',
+                                content: {
+                                    'application/json': {
+                                        schema: {
+                                            $ref: '#/components/schemas/JobsResponse'
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             },
             components: {
@@ -313,6 +332,58 @@ export default class {
                                 type: 'array',
                                 items: {
                                     $ref: '#/components/schemas/Post'
+                                }
+                            }
+                        },
+                        required: ['meta', 'data']
+                    },
+                    Job: {
+                        type: 'object',
+                        properties: {
+                            company: {
+                                type: 'string',
+                                description: 'Company name'
+                            },
+                            title: {
+                                type: 'string',
+                                description: 'Job title'
+                            },
+                            logo: {
+                                type: ['string', 'null'],
+                                format: 'uri',
+                                description: 'Company logo URL'
+                            },
+                            description: {
+                                type: ['string', 'null'],
+                                description: 'Job description (HTML)'
+                            },
+                            start_date: {
+                                type: 'string',
+                                format: 'date',
+                                description: 'Employment start date'
+                            },
+                            end_date: {
+                                type: ['string', 'null'],
+                                format: 'date',
+                                description: 'Employment end date'
+                            },
+                            current: {
+                                type: 'boolean',
+                                description: 'Whether this is a current position'
+                            }
+                        },
+                        required: ['company', 'title', 'start_date', 'current']
+                    },
+                    JobsResponse: {
+                        type: 'object',
+                        properties: {
+                            meta: {
+                                $ref: '#/components/schemas/Meta'
+                            },
+                            data: {
+                                type: 'array',
+                                items: {
+                                    $ref: '#/components/schemas/Job'
                                 }
                             }
                         },
